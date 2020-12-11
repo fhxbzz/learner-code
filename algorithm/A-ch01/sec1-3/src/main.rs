@@ -23,22 +23,22 @@ fn main() -> Result<(), Box<dyn Error>>{
     //1-7
     //println!("{:03}",c*100+b*10+a);
     //1-8
-    let a:i32 = read!(stdin);
-    let b:i32 = read!(stdin);
+    let mut a:i32 = read!(stdin);
+    let mut b:i32 = read!(stdin);
     //用元组（推荐）
     //let (a,b) = (b,a);
     //倒酱油
-    //let c = a;
-    //let a = b;
-    //let b = c;
+    let c = a;
+    a = b;
+    b = c;
     //加减法
     //let c = a + b;
-    //let a = b;
-    //let b = c - a;
+    //a = b;
+    //b = c - a;
     //位运算
-    let c = a ^ b;
-    let a = b;
-    let b = c ^ a;
+    //let c = a ^ b;
+    //a = b;
+    //b = c ^ a;
     println!("{} {}",a,b);
     Ok(())
 }
