@@ -4,7 +4,7 @@ use std::error::Error;
 macro_rules! init {
     ($i:ident) =>{
             let mut buffer = String::new();
-            io::stdin().read_to_string(&mut buffer)?;
+            io::stdin().take(3000).read_to_string(&mut buffer)?;
             let mut $i = buffer.split_whitespace();
     };
 }
